@@ -1,0 +1,40 @@
+{
+	"id": "01jqkws8dct066wbqjccff5jxn",
+	"additional_discount_percentage": null,
+	"lat": null,
+	"lng": null,
+	"cart_items": [
+		{
+			"id": "01jqkws9r994g1jnsr560dz9nj",
+			"quantity": 2,
+			"discount_percentage": null,
+			"cart_id": "01jqkws8dct066wbqjccff5jxn",
+			"product_id": "01JQKWGNJAP61JBKDPK6C2YG79",
+			"product": {
+				"id": "01JQKWGNJAP61JBKDPK6C2YG79",
+				"name": "Combination Pliers",
+				"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris viverra felis nec pellentesque feugiat. Donec faucibus arcu maximus, convallis nisl eu, placerat dolor. Morbi finibus neque nec tincidunt pharetra. Sed eget tortor malesuada, mollis enim id, condimentum nisi. In viverra quam at bibendum ultricies. Aliquam quis eros ex. Etiam at pretium massa, ut pharetra tortor. Sed vel metus sem. Suspendisse ac molestie turpis. Duis luctus justo massa, faucibus ornare eros elementum et. Vestibulum quis nisl vitae ante dapibus tempor auctor ut leo. Mauris consectetur et magna at ultricies. Proin a aliquet turpis.",
+				"price": 14.15,
+				"is_location_offer": false,
+				"is_rental": false,
+				"in_stock": true
+			}
+		},
+		{
+			"id": "01jqkwsgh39xexnhmy0nkyd5bb",
+			"quantity": 2,
+			"discount_percentage": null,
+			"cart_id": "01jqkws8dct066wbqjccff5jxn",
+			"product_id": "01JQKWGNJWKC5MX2HH794C7CTX",
+			"product": {
+				"id": "01JQKWGNJWKC5MX2HH794C7CTX",
+				"name": "Bolt Cutters",
+				"description": "Aliquam viverra scelerisque tempus. Ut vehicula, ex sed elementum rhoncus, sem neque vehicula turpis, sit amet accumsan mauris justo non magna. Cras ut vulputate lectus, sit amet sollicitudin enim. Quisque sit amet turpis ut orci pulvinar vestibulum non at velit. Quisque ultrices malesuada felis non rutrum. Sed molestie lobortis nisl, in varius arcu dictum vel. In sit amet fringilla orci. Quisque ac magna dui. Nam pulvinar nulla sed commodo ultricies. Suspendisse aliquet quis eros sit amet gravida. Aenean vitae arcu in sapien sodales commodo.",
+				"price": 48.41,
+				"is_location_offer": true,
+				"is_rental": false,
+				"in_stock": true
+			}
+		}
+	]
+}

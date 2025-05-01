@@ -1,0 +1,62 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"first_name": {
+			"type": "string"
+		},
+		"last_name": {
+			"type": "string"
+		},
+		"dob": {
+			"type": "string"
+		},
+		"phone": {
+			"type": "string"
+		},
+		"email": {
+			"type": "string"
+		},
+		"totp_enabled": {
+			"type": "boolean"
+		},
+		"created_at": {
+			"type": "string"
+		},
+		"address": {
+			"type": "object",
+			"properties": {
+				"street": {
+					"type": "string"
+				},
+				"city": {
+					"type": "string"
+				},
+				"state": {
+					"type": "string"
+				},
+				"country": {
+					"type": "string"
+				},
+				"postal_code": {
+					"type": "string"
+				}
+			},
+			"required": ["street", "city", "state", "country", "postal_code"]
+		}
+	},
+	"required": [
+		"id",
+		"first_name",
+		"last_name",
+		"dob",
+		"phone",
+		"email",
+		"totp_enabled",
+		"created_at",
+		"address"
+	]
+}

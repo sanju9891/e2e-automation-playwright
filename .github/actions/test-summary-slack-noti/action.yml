@@ -1,0 +1,54 @@
+name: Reusable workflow - Slack notification
+description: 'Send a slack notification for e2e tests'
+inputs:
+  job_status:
+    required: true
+    type: string
+    description: 'Job status that triggered this notification'
+  report_url:
+    description: 'URL to the test report'
+    required: true
+    type: string
+  slack_webhook_url:
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Send slack notification on success
+      if: inputs.job_status == 'success'
+      uses: 8398a7/action-slack@v3
+      with:
+        status: custom
+        custom_payload: |
+          {
+            "text": "✅ All tests PASSED! :tada:",
+            "attachments": [
+              {
+                "title": "View test report",
+                "title_link": "${{ inputs.report_url }}",
+                "color": 'good',
+              }
+            ]
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ inputs.slack_webhook_url }}
+
+    - name: Send Slack notification on failure
+      if: inputs.job_status != 'success'
+      uses: 8398a7/action-slack@v3
+      with:
+        status: custom
+        custom_payload: |
+          {
+            "text": "❌ Some tests FAILED :cry:",
+            "attachments": [
+              {
+                "title": "View test report",
+                "title_link": "${{ inputs.report_url }}",
+                "color": 'good',
+              }
+            ]
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ inputs.slack_webhook_url }}

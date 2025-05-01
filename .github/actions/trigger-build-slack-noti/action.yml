@@ -1,0 +1,109 @@
+name: 'Reusable slack notification'
+description: 'Send a slack notification for e2e tests'
+inputs:
+  actor:
+    description: 'GitHub user who triggered the workflow'
+    required: true
+    type: string
+  workflow_url:
+    description: 'URL to the workflow run'
+    required: true
+    type: string
+  commit:
+    description: 'Commit SHA'
+    required: true
+    type: string
+  repository:
+    description: 'GitHub repository'
+    required: true
+    type: string
+  run_id:
+    description: 'GitHub run ID'
+    required: true
+    type: string
+  report_url:
+    description: 'URL to the test report'
+    required: true
+    type: string
+  test_env:
+    description: 'Test environment'
+    required: false
+    default: 'staging'
+    type: string
+  test_branch:
+    description: 'Test e2e branch'
+    required: false
+    default: 'main'
+    type: string
+  test_type:
+    description: 'Type of test'
+    required: true
+    type: string
+  workers:
+    description: 'Number of parallel workers'
+    required: true
+    default: 4
+    type: string
+  slack_channel:
+    description: 'Slack channel to notify'
+    required: false
+    default: '#jenkins-tests-prodtest'
+    type: string
+  slack_webhook_url:
+    description: 'Slack webhook URL'
+    required: true
+    type: string
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Send Slack notification
+      uses: 8398a7/action-slack@v3
+      with:
+        status: custom
+        custom_payload: |
+          {
+            text: "Running tests triggered by ${{ inputs.actor }} with following parameters",
+            attachments: [
+              {
+                color: 'good',
+                fields: [
+                  {
+                    title: 'Test environment',
+                    value: '${{ inputs.test_env }}',
+                    short: false
+                  },
+                  {
+                    title: 'Test branch',
+                    value: '${{ inputs.test_branch }}',
+                    short: false
+                  },
+                  {
+                    title: 'Test type',
+                    value: '${{ inputs.test_type }}',
+                    short: false
+                  },
+                  {
+                    title: 'Number of parallel workers',
+                    value: '${{ inputs.workers }}',
+                    short: false
+                  },
+                  {
+                    title: 'Notify slack channels',
+                    value: '${{ inputs.slack_channel }}',
+                    short: false
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Workflow:* <${{ inputs.workflow_url }}|View Workflow Run>"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text": "*Report:* <${{ inputs.report_url }}|View Test Report>"
+                  }
+                ]
+              }
+            ]
+          }
+      env:
+        SLACK_WEBHOOK_URL: ${{ inputs.slack_webhook_url }}
