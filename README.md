@@ -10,6 +10,15 @@ A comprehensive testing framework that
 - Combines UI, API, Visual, and Performance testing in one solution
 - Integrated with CI/CD pipelines and automated reporting systems.
 
+### Screenshots
+
+<img width="842" alt="image" src="https://github.com/user-attachments/assets/2a1575fc-7ebb-42a0-8a2e-e353659b7619" />
+<img width="1274" alt="image" src="https://github.com/user-attachments/assets/7f0551ac-71d0-475f-9e9e-9936d0d389e2" />
+<img width="523" alt="image" src="https://github.com/user-attachments/assets/6127e465-1bab-4c19-80e3-8e602c53d0f9" />
+<img width="875" alt="image" src="https://github.com/user-attachments/assets/fbca39c8-a2ae-448e-b3b6-bd98c8229006" />
+<img width="984" alt="image" src="https://github.com/user-attachments/assets/6ff35587-3902-48b7-bf3a-74a4f32d956e" />
+
+
 ## ✨ Features
 
 1. All-in-one Testing Solution:
