@@ -71,7 +71,7 @@ A comprehensive testing framework that
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/longnv1995/e2e-automation-playwright.git
+git clone https://github.com/longautoqa/e2e-automation-playwright.git
 ```
 
 2. Navigate to project directory:
