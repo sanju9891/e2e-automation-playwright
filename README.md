@@ -7,7 +7,7 @@ The tests are executed via both `Jenkins` pipeline and `GitHub Actions`
 
 A comprehensive testing framework that
 
-- Combines UI, API, Visual in one solution
+- Combines API, E2E, Visual testing in one solution
 - Integrated with CI/CD pipelines and automated reporting systems.
 
 ### Screenshots
@@ -107,7 +107,7 @@ By default, tests will run in staging (QA) environment
 ### Basic command
 
 ```bash
-TEST_ENV={env} TEST_TYPE=${project_type} WORKERS=4 make test
+TEST_ENV={env} TEST_TYPE=${project_type} WORKERS={number} make test
 ```
 
 ### Execute tests
