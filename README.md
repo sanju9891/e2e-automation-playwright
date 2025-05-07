@@ -107,7 +107,7 @@ By default, tests will run in staging (QA) environment
 ### Basic command
 
 ```bash
-TEST_ENV={env} TEST_TYPE=${project_type} make test --workers=4
+TEST_ENV={env} TEST_TYPE=${project_type} WORKERS=4 make test
 ```
 
 ### Execute tests
@@ -115,25 +115,25 @@ TEST_ENV={env} TEST_TYPE=${project_type} make test --workers=4
 #### API Tests
 
 ```bash
-TEST_ENV=${env} make api-test --workers=4
+TEST_ENV=${env} WORKERS=4 make api-test
 ```
 
 #### UI Tests
 
 ```bash
-TEST_ENV=${env} make e2e-test --workers=4
+TEST_ENV=${env} WORKERS=4 make e2e-test
 ```
 
 #### Visual Tests
 
 ```bash
-TEST_ENV=${env} make visual-test --workers=4
+TEST_ENV=${env} WORKERS=4 make visual-test
 ```
 
 #### Regression Tests
 
 ```bash
-TEST_ENV=${env} make regression-test --workers=4
+TEST_ENV=${env} WORKERS=10 make regression-test
 ```
 
 #### Count Tests
