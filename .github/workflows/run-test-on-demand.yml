@@ -33,11 +33,11 @@ on:
         required: true
         default: 4
         type: string
-      slack_channel:
-        description: 'Slack channel to send notifications'
-        required: true
-        default: '#jenkins-tests-prodtest'
-        type: string
+      #slack_channel:
+      #  description: 'Slack channel to send notifications'
+      #  required: true
+      #  default: '#jenkins-tests-prodtest'
+      #  type: string
 
 env:
   TEST_ENV: ${{ github.event.inputs.test_env || 'staging' }}
